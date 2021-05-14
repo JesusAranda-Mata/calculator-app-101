@@ -31,14 +31,25 @@ const subtract = (numA, numB) => {
 
 const multiply = (numA, numB) => {
   // * to get a product then return it
+  const multiply = numA * numB
+  return multiply
   // Open up the inspector tool in Chrome and select the Console tab to see what this functions is "logging out" to the console.
   console.log(numA, numB)
 }
 
-const divide = null
+const divide = (numA, numb) => {
+  const divide = numA / numb
+  return divide
+  console.log(numA, numB)
+}
 // / to get a quotient,
 
-const modulus = null
+
+const modulus = (numA, numB) => {
+  const modulus = numA % numB
+  return modulus
+  console.log(numA, numB)
+}
 // and % to get a remainder.
 
 // This function changes the "operation" variable to be equal to the "id" of the button we choose on the web page.
@@ -60,15 +71,15 @@ const putResultInElement = (operationResults) => {
 // The function uses the value of "operation" variable to determine which operation function it should use on the number: add, subtract, multiply, divide, or modulus
 const equals = () => {
   switch (operation) {
-    case "addition":  putResultInElement(add(firstNum, secondNum)) 
+    case "addition":  putResultInElement(add(firstNum, secondNum)), console.log(add(firstNum, secondNum))
     break;
-    case "subtraction": putResultInElement(subtract(firstNum, secondNum)) 
+    case "subtraction": putResultInElement(subtract(firstNum, secondNum)), console.log(subtract(firstNum, secondNum)) 
     break;
-    case "multiplication": multiply(firstNum, secondNum) 
+    case "multiplication": putResultInElement(multiply(firstNum, secondNum)), console.log(multiply(firstNum, secondNum)) 
     break;
-    case "division": console.log(divide(firstNum, secondNum)) 
+    case "division": putResultInElement(divide(firstNum, secondNum)), console.log(divide(firstNum, secondNum))
     break;
-    case "modulus": console.log(modulus(firstNum, secondNum)) 
+    case "modulus": putResultInElement(modulus(firstNum, secondNum)), console.log(modulus(firstNum, secondNum)) 
     break;
     default: "Choose an operation"
   }
