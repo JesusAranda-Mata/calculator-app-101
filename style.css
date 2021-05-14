@@ -1,5 +1,68 @@
 body {
-  margin: 20% auto;
+  margin: 10% auto;
   width: 50%;
   height: 75%;
+}
+
+header {
+  background-image: url(./img/math.jpg);
+  background-position: center;
+  background-size: contain;
+  max-width: 100%;
+  height: 200px; 
+  /* border: 1px solid black; */
+  margin-bottom: 25px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center; 
+}
+
+.numbers-imput {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.math-btn {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.clr-result {
+  /* border: 1px solid purple; */
+  /* padding: 50px; */
+  display: grid;
+  grid-template-columns: 25% auto auto auto;
+  grid-template-rows: 50% auto;
+  height: 72px;
+  width: auto;
+  margin-bottom: 25px;
+}
+
+.clr-result .btn-equals {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.clr-result .btn-reset {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+#result {
+  border: 1px solid palevioletred;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  padding: 72px;
+  background-color: black;
+  color: aliceblue;
 }
